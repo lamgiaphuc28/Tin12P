@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Giới thiệu bản thân</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    @keyframes colorChange {
+      0% { color: red; }
+      20% { color: lightcoral; }
+      30% { color: limegreen; }
+      40% { color: gold; }
+      50% { color: lightblue; }
+      60% { color: blue; }
+      70% { color: yellow; } nd
+      80% { color: purple; }
+      90% { color: navy; }
+      100% { color: green; }
+    }
+
+    h1 {
+      animation: colorChange 3s infinite;
+      font-size: 50px;
+      text-align: center;
+      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 30px;
+      text-align: center;
+      line-height: 0.5cm;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: hotpink;
+    }
+
+    a {
+      font-size: 30px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-decoration: none;
+    }
+
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      color: gold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      color: lightblue;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    @keyframes grow {
+      0%, 100% {
+        height: 40px;
+        transform: translateY(0);
+      }
+      50% {
+        height: 80px;
+        transform: translateY(-40px);
+      }
+    }
+
+    .bar-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .bar {
+      width: 3%;
+      margin: 0 1%;
+      background-color: #00c3ff;
+      border-radius: 10px;
+      animation: grow 1s infinite;
+      animation-delay: calc(0.2s * var(--i));
+    }
+
+    .bar:nth-child(4) {
+      background-color: #a28dff;
+    }
+
+    .bar:nth-child(5) {
+      background-color: #ff6ec4;
+    }
+
+    .bar:nth-child(6) {
+      background-color: #ff6347;
+    }
+
+    .bar:nth-child(7) {
+      background-color: #32cd32;
+    }
+
+    .bar:nth-child(8) {
+      background-color: #ff4500;
+    }
+
+    .bar:nth-child(9) {
+      background-color: #ff1493;
+    }
+
+    .bar:nth-child(10) {
+      background-color: #1e90ff;
+    }
+
+    .bar:nth-child(11) {
+      background-color: #ffff00;
+    }
+
+    .bar:nth-child(12) {
+      background-color: #8a2be2;
+    }
+
+    .bar:nth-child(13) {
+      background-color: #a28dff;
+    }
+
+    .bar:nth-child(14) {
+      background-color: #ff6ec4;
+    }
+
+    .bar:nth-child(15) {
+      background-color: #ff6347;
+    }
+
+    .bar:nth-child(16) {
+      background-color: #32cd32;
+    }
+
+    .bar:nth-child(17) {
+      background-color: #ff4500;
+    }
+
+    .bar:nth-child(18) {
+      background-color: #ff1493;
+    }
+
+    .bar:nth-child(19) {
+      background-color: #1e90ff;
+    }
+
+    .bar:nth-child(20) {
+      background-color: #ffff00;
+    }
+
+    .bar:nth-child(21) {
+      background-color: #8a2be2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Giới thiệu bản thân</h1>
+  <p style="color: lightblue;">Tui tên là Lâm Gia Phúc</p>
+  <p style="color: yellow;">Bộ phim yêu thích ♡♡♡</p>
+
+  <a href="contents/tkb.html" target="_blank"><center>TKB</center></a><br>
+  <a href="contents/baitap.html" target="_blank"><center>Danh mục bài tập</center></a><br>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><center>Link nhạc</center></a><br>
+
+  <div style="display: flex; justify-content: space-between; margin: 1cm 0.5cm; margin-left: -20px; margin-right: -20px;">
+    <iframe src="https://www.youtube.com/embed/U-l4ya3ejko?si=n7wg0VI_BZkPfiSc" width="100%" height="360" frameborder="0"></iframe>
+    <iframe src="https://www.youtube.com/embed/RneMEagAkcE?si=UhgVh7gZM16FVPdK" width="100%" height="360" frameborder="0"></iframe>
+  </div>
+  
+  <p style="color: white;">Bài hát yêu thích ♡♡♡</p>
+  <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1934224379&color=%2300bcff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+  <h3>Playlist của Phúc</h3>
+
+  <div style="display: flex; justify-content: space-between; margin: 1cm 0.5cm; margin-left: -10px; margin-right: -10px;">
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EIVxOHBJEPPbR?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/4gtmfgvg4SnNvus0i7QN9V?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <h2>Copyright by Phuclio©</h2>
+  <img width="50%" height="50%" src="contents/picture/giphy.gif">
+  <style>
+      body{
+        background-image:url("contents/picture/backgroud.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+  </style>
+  <div class="bar-container">
+    <div class="bar" style="--i: 1;"></div>
+    <div class="bar" style="--i: 2;"></div>
+    <div class="bar" style="--i: 3;"></div>
+    <div class="bar" style="--i: 4;"></div>
+    <div class="bar" style="--i: 5;"></div>
+    <div class="bar" style="--i: 6;"></div>
+    <div class="bar" style="--i: 7;"></div>
+    <div class="bar" style="--i: 8;"></div>
+    <div class="bar" style="--i: 9;"></div>
+    <div class="bar" style="--i: 10;"></div>
+    <div class="bar" style="--i: 11;"></div>
+    <div class="bar" style="--i: 12;"></div>
+    <div class="bar" style="--i: 13;"></div>
+    <div class="bar" style="--i: 14;"></div>
+    <div class="bar" style="--i: 15;"></div>
+    <div class="bar" style="--i: 16;"></div>
+    <div class="bar" style="--i: 17;"></div>
+    <div class="bar" style="--i: 18;"></div>
+    <div class="bar" style="--i: 19;"></div>
+    <div class="bar" style="--i: 20;"></div>
+    <div class="bar" style="--i: 21;"></div>
+    <div class="bar" style="--i: 22;"></div>
+    <div class="bar" style="--i: 23;"></div>
+    <div class="bar" style="--i: 24;"></div>
+  </div>
+</body>
+</html>

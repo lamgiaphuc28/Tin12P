@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Tính Tiền Taxi</title>
+</head>
+<body>
+  <h1>CƯỚC TAXI</h1>
+  <p id="time"></p>
+  <div>
+    Quãng đường:
+    <input type="range" id="distance" min="0" max="100" value="30">
+    <span id="distance-value">30 km</span>
+  </div>
+  <button onclick="calculateFare()">Tính tiền</button>
+  <p>Số tiền phải trả: <span style="color: red; font-weight: bold;" id="fare">330.000 đồng</span></p>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('vi-VN');
+      document.getElementById('time').textContent = timeString;
+    }
+
+    setInterval(updateTime, 1000);
+
+    function calculateFare() {
+      const distance = document.getElementById('distance').value;
+      const distanceValueElement = document.getElementById('distance-value');
+      distanceValueElement.textContent = distance + ' km';
+
+      let fare = 0;
+      if (distance <= 30) {
+        fare = distance * 11000;
+      } else {
+        fare = 30 * 11000 + (distance - 30) * 9500;
+      }
+
+      const fareElement = document.getElementById('fare');
+      fareElement.textContent = fare.toLocaleString('vi-VN') + ' đồng';
+    }
+  </script>
+</body>
+</html>
