@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     localStorage.setItem('username', username);
 
     // Chuyển hướng đến trang thành công
-    window.location.href = 'success.html';
+    window.location.href = 'homealone.html';
   } else {
     alert("Tên đăng nhập hoặc mật khẩu không đúng.");
   }
