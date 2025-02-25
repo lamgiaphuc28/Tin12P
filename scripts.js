@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const password = document.getElementById('password').value;
   const errorMessageDiv = document.getElementById('error-message');
 
-  const isValidLogin = (username === "phuclio" && password === "phuc28");
+  const isValidLogin = (username === "test" && password === "password");
 
   if (isValidLogin) {
     errorMessageDiv.textContent = "Đăng nhập thành công!";
