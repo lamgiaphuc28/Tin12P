@@ -1,21 +1,19 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-  const errorMessageDiv = document.getElementById('error-message');
+function login() {
+  let a = document.getElementById("username").value;
+  let b = document.getElementById("password").value;
 
-  const isValidLogin = (username === "test" && password === "password");
-
-  if (isValidLogin) {
-    errorMessageDiv.textContent = "Đăng nhập thành công!";
-    errorMessageDiv.style.color = "green";
-    localStorage.setItem('username', username);
-    setTimeout(() => {
-      window.location.href = 'homealone.html';
-    }, 1500);
+  if (a === "abc" && b === "123") {
+    document.getElementById("success-message").textContent = "Đăng nhập thành công!";
+    setTimeout(function() {
+      window.location.href = "homealone.html";
+    }, 5000);
   } else {
-    errorMessageDiv.textContent = "Tên đăng nhập hoặc mật khẩu không đúng.";
-    errorMessageDiv.style.color = "red";
+    document.getElementById("error-message").textContent = "Không hợp lệ";
   }
+}
+
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  login();
 });
