@@ -6,7 +6,7 @@ function login() {
     document.getElementById("success-message").textContent = "Đăng nhập thành công!";
     setTimeout(function() {
       window.location.href = "homealone.html";
-    }, 5000);
+    }, 3000);
   } else {
     document.getElementById("error-message").textContent = "Không hợp lệ";
   }
