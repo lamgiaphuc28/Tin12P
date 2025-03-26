@@ -3,16 +3,32 @@
 <head>
     <meta charset="utf-8">
     <style>
-        .header {
-            color: red;
-            background-color: lightcyan;
-            padding: 20px;
-            text-align: center;
-            text-size: 35px;
+        @keyframes colorChange {
+          0% { color: red; }
+          20% { color: lightcoral; }
+          30% { color: limegreen; }
+          40% { color: gold; }
+          50% { color: lightblue; }
+          60% { color: blue; }
+          70% { color: yellow; }
+          80% { color: purple; }
+          90% { color: navy; }
+          100% { color: green; }
         }
+        .header {
+            animation: colorChange 3s infinite;   
+            font-size: 50px;
+            text-align: center;
+            background-color: lightpink;
+            background-size: cover;
+            line-height: ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style:;
+          }
 
         .menu {
             overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: black;
             display: flex;
         }
@@ -25,16 +41,18 @@
             padding: 10px;
             text-decoration: none;
             color: white;
+            font-style: blod;
         }
 
         .menu a:hover {
-            background-color: lightgray;
+            background-color: lightcyan;
+            text-color: black;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        THPT NGO QUYEN
+        THPT Ngô Quyền
     </div>
     <div class="menu">
         <a href="contents/gioithieu.html" target="noidung">Giới thiệu</a>
