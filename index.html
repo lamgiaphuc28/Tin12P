@@ -1,37 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập</title>
-  <style>    #error-message {
-    margin-top: 10px;
-    color: lightred;
-  }
-  #success-message {
-    margin-top: 10px;
-    color: lightgreen;
-  </style>
-  <link rel="stylesheet" href="loginstyle.css">
+    <meta charset="utf-8">
+    <title>THPT Ngô Quyền</title>
+    <link rel="stylesheet" href="indexstyle.css">
 </head>
-
 <body>
-  <div class="wrapper">
-    <form id="loginForm" action="#">
-      <h2>Đăng nhập</h2>
-      <div class="input-field">
-        <input type="text" id="username" required>
-        <label>Nhập tên tài khoản</label>
-      </div>
-      <div class="input-field">
-        <input type="password" id="password" required>
-        <label>Nhập mật khẩu</label>
-      </div>
-      <button type="submit" id="ok" name="ok">Đăng nhập</button>
-      <div id="error-message"></div>
-      <div id="success-message"></div>
-    </form>
-  </div>
-  <script src="scripts.js"></script>
+    <div class="header">
+        THPT Ngô Quyền
+    </div>
+    <div class="menu">
+        <a href="contents/gioithieu.html" target="noidung">Giới thiệu</a>
+        <a href="contents/tkb.html" target="noidung">Thời khóa biểu</a>
+        <a href="contents/tkvm.html" target="noidung">Hướng nghiệp</a>
+        <a href="contents/Bai7-NV1.html" target="noidung">Góp ý</a>
+        <a href="contents/game.html" target="noidung">Game</a>
+        <a href="dangnhap.html" target="noidung">Đăng nhập</a>
+    </div>
+    <iframe name="noidung" width="100%" height="1000px"></iframe>
 </body>
 </html>
