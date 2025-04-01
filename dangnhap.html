@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <style>    #error-message {
+    margin-top: 10px;
+    color: lightred;
+  }
+  #success-message {
+    margin-top: 10px;
+    color: lightgreen;
+  </style>
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="loginForm" action="#">
+      <h2>Đăng nhập</h2>
+      <div class="input-field">
+        <input type="text" id="username" required>
+        <label>Nhập tên tài khoản</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label>Nhập mật khẩu</label>
+      </div>
+      <button type="submit" id="ok" name="ok">Đăng nhập</button>
+      <div id="error-message"></div>
+      <div id="success-message"></div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
