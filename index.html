@@ -4,118 +4,33 @@
     <meta charset="utf-8">
     <title>THPT Ngô Quyền</title>
     <style>
-        @keyframes colorChange {
-            0% { color: #FF0000; }
-            1% { color: #FF3300; }
-            2% { color: #FF6600; }
-            3% { color: #FF9900; }
-            4% { color: #FFCC00; }
-            5% { color: #FFFF00; }
-            6% { color: #CCFF00; }
-            7% { color: #99FF00; }
-            8% { color: #66FF00; }
-            9% { color: #33FF00; }
-            10% { color: #00FF00; }
-            11% { color: #00FF33; }
-            12% { color: #00FF66; }
-            13% { color: #00FF99; }
-            14% { color: #00FFCC; }
-            15% { color: #00FFFF; }
-            16% { color: #00CCFF; }
-            17% { color: #0099FF; }
-            18% { color: #0066FF; }
-            19% { color: #0033FF; }
-            20% { color: #0000FF; }
-            21% { color: #3300FF; }
-            22% { color: #6600FF; }
-            23% { color: #9900FF; }
-            24% { color: #CC00FF; }
-            25% { color: #FF00FF; }
-            26% { color: #FF00CC; }
-            27% { color: #FF0099; }
-            28% { color: #FF0066; }
-            29% { color: #FF0033; }
-            30% { color: #FF0000; }
-            31% { color: #F01A00; }
-            32% { color: #E03400; }
-            33% { color: #D04E00; }
-            34% { color: #C06800; }
-            35% { color: #B08200; }
-            36% { color: #A09C00; }
-            37% { color: #80B600; }
-            38% { color: #60D000; }
-            39% { color: #40EA00; }
-            40% { color: #20FF00; }
-            41% { color: #00FF20; }
-            42% { color: #00FF40; }
-            43% { color: #00FF60; }
-            44% { color: #00FF80; }
-            45% { color: #00FFA0; }
-            46% { color: #00FFC0; }
-            47% { color: #00FFE0; }
-            48% { color: #00FFFF; }
-            49% { color: #00E0FF; }
-            50% { color: #00C0FF; }
-            51% { color: #00A0FF; }
-            52% { color: #0080FF; }
-            53% { color: #0060FF; }
-            54% { color: #0040FF; }
-            55% { color: #0020FF; }
-            56% { color: #1A00F0; }
-            57% { color: #3400E0; }
-            58% { color: #4E00D0; }
-            59% { color: #6800C0; }
-            60% { color: #8200B0; }
-            61% { color: #9C00A0; }
-            62% { color: #B60080; }
-            63% { color: #D00060; }
-            64% { color: #EA0040; }
-            65% { color: #FF0020; }
-            66% { color: #FF0000; }
-            67% { color: #FF1A00; }
-            68% { color: #FF3400; }
-            69% { color: #FF4E00; }
-            70% { color: #FF6800; }
-            71% { color: #FF8200; }
-            72% { color: #FF9C00; }
-            73% { color: #FFB600; }
-            74% { color: #FFD000; }
-            75% { color: #FFE400; }
-            76% { color: #FFFF00; }
-            77% { color: #E4FF00; }
-            78% { color: #D0FF00; }
-            79% { color: #B6FF00; }
-            80% { color: #9CFF00; }
-            81% { color: #82FF00; }
-            82% { color: #68FF00; }
-            83% { color: #4EFF00; }
-            84% { color: #34FF00; }
-            85% { color: #1AFF00; }
-            86% { color: #00FF00; }
-            87% { color: #00FF1A; }
-            88% { color: #00FF34; }
-            89% { color: #00FF4E; }
-            90% { color: #00FF68; }
-            91% { color: #00FF82; }
-            92% { color: #00FF9C; }
-            93% { color: #00FFB6; }
-            94% { color: #00FFD0; }
-            95% { color: #00FFE4; }
-            96% { color: #00FFFF; }
-            97% { color: #00E4FF; }
-            98% { color: #00D0FF; }
-            99% { color: #00B6FF; }
-            100% { color: #0080FF; }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 400% 50%;
+            }
         }
+
         .header {
-            animation: colorChange 3s infinite;
             font-size: 50px;
             text-align: center;
-            background-color: lightpink;
-            background-size: cover;
+            background-image: linear-gradient(90deg, #00c6a7, #1e90ff, #ff6ec7, #00c6a7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 100%;
+            animation: gradientAnimation 10s linear infinite;
             line-height: 1.5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-style: normal;
+            background-color: lightpink;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        body {
+            transition: background-color 0.5s ease;
         }
 
         .menu {
@@ -177,6 +92,37 @@
         <a href="contents/game.html" target="noidung">Game</a>
         <a href="dangnhap.html" target="noidung">Đăng nhập</a>
     </div>
-    <iframe name="noidung" width="100%" height="1000px"></iframe>
+    <button id="toggleBackground">Đổi nền</button>
+    <iframe name="noidung" id="myFrame" width="100%" height="500px"></iframe>
+    <script>
+        const toggleButton = document.getElementById("toggleBackground");
+        let isDark = false;
+        const myFrame = document.getElementById("myFrame");
+
+        toggleButton.addEventListener("click", () => {
+            if (isDark) {
+                document.body.style.backgroundColor = "white";
+                if(myFrame.contentWindow && myFrame.contentWindow.document){
+                    myFrame.contentWindow.document.body.style.color = "black";
+                }
+            } else {
+                document.body.style.backgroundColor = "black";
+                if(myFrame.contentWindow && myFrame.contentWindow.document){
+                    myFrame.contentWindow.document.body.style.color = "white";
+                }
+            }
+            isDark = !isDark;
+        });
+
+        myFrame.onload = function() {
+            adjustIframeHeight();
+        };
+
+        function adjustIframeHeight() {
+            if (myFrame.contentWindow && myFrame.contentWindow.document) {
+                myFrame.style.height = myFrame.contentWindow.document.body.scrollHeight + 'px';
+            }
+        }
+    </script>
 </body>
 </html>
